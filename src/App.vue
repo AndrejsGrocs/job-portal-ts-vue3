@@ -1,11 +1,11 @@
 <template>
   <div class="app">
-    <p>{{name}} - {{age}}</p>
+   <!--  <p>{{name}} - {{age}}</p>
     <button @click='changeName("Taschibana Ukyo")'>change name</button>
-    <button @click='changeAge(31)'>change age</button>
+    <button @click='changeAge(31)'>change age</button> -->
 
 
-    <p>{{jobs[0].location}}</p>
+     <JobList :jobs="jobs"/>
 
 
   </div>
@@ -16,11 +16,12 @@
 let age1: string | number = 45   // We are not able to use it inside the data() object
 
 import { defineComponent, reactive, ref, toRefs } from "vue";
+import JobList from './components/JobList.vue'
 import Job from './types/Job'
 
 export default defineComponent({
   name: "App",
-  components: {},
+  components: {JobList},
   setup(){   
     //Way how to use reactive()
 
@@ -42,9 +43,9 @@ export default defineComponent({
 
     const jobs = ref<Job[]>([
 
-            {title: 'farm worker', location: 'Mariaort', salary: 100000, id:'1' }, 
-            {title: 'web developer', location: 'Regensburg', salary: 100000, id:'1' }, 
-            {title: 'game stester', location: 'Regensburg', salary: 100000, id:'1' }, 
+            {title: 'farm worker', location: 'Munich', salary: 100000, id:'1' }, 
+            {title: 'web developer', location: 'Berlin', salary: 100000, id:'1' }, 
+            {title: 'game stester', location: 'Hamburg', salary: 100000, id:'1' }, 
             {title: 'react developer', location: 'Regensburg', salary: 100000, id:'1' }, 
 
      ]) 
