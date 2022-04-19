@@ -2,5 +2,12 @@
 
 body {
     font-family: 'Open Sans';
-    background: #ece6d9;
+    background: #A7226E;
+}
+
+
+h1 {
+    font-family: 'Courier New', Courier, monospace;
+    letter-spacing: 4px;
+    color: #F26B38;
 }

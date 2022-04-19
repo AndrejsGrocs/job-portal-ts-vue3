@@ -4,6 +4,11 @@
     <button @click='changeName("Taschibana Ukyo")'>change name</button>
     <button @click='changeAge(31)'>change age</button> -->
           <header>
+            <div class="title">
+             
+               <h1>Jobs Portal</h1>
+            </div>
+            
              <div class="order">
                      <button @click="handleClick('title')">order by title</button>
        <button @click="handleClick('salary')">order by salary</button>
@@ -50,9 +55,9 @@ export default defineComponent({
 
     const jobs = ref<Job[]>([
 
-            {title: 'farm worker', location: 'Munich', salary: 100000, id:'1' }, 
-            {title: 'web developer', location: 'Berlin', salary: 100000, id:'1' }, 
-            {title: 'game stester', location: 'Hamburg', salary: 100000, id:'1' }, 
+            {title: 'farm worker', location: 'Munich', salary: 50000, id:'1' }, 
+            {title: 'web developer', location: 'Berlin', salary: 41000, id:'1' }, 
+            {title: 'game stester', location: 'Hamburg', salary: 39000, id:'1' }, 
             {title: 'react developer', location: 'Regensburg', salary: 100000, id:'1' }, 
 
      ]) 
@@ -102,12 +107,24 @@ export default defineComponent({
   }
   button {
     margin: 0 10px;
-    color: #1195c9;
-    border: 3px solid #1195c9;
+    color: #F26B38;
+    border: 3px solid #f0531b;
     background: #d5f0ff;
     padding: 8px 16px;
     border-radius: 4px;
     cursor: pointer;
     font-weight: bold;
+    border-radius: 10px;
+  }
+  header .title{
+    display: flex;
+    justify-content: center;
+  }
+  header img {
+    width: 60px;
+    margin-right: 20px;
+  }
+  header h1 {
+    font-size: 3em;
   }
 </style>
